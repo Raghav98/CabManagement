@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<link rel="stylesheet" type="text/css" href="css/signinstyle.css">
+<link rel="stylesheet" type="text/css" href="css/bgimg.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/signin.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                         <li>
+                             <span class="headi">Cab Management System</span>
+                         </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->       
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+                
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 span1">
+                       ADMINISTRATOR
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+
+
+
+<div class="container-fluid background">
+      <div class="row">
+              <div class="login-form-container" id="login-form">
+                <div class="login-form-content">
+                      <div class="login-form-header">
+                            <h3>Login to Your Account</h3>
+                      </div>
+                      <form method="post" action="" class="login-form">
+                              <div class="input-container">
+                                     <i class="fa fa-envelope"></i>
+                                     <input type="email" class="input" name="email" placeholder="Email"  required/>
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-lock"></i>
+                                     <input type="password"  id="login-password" class="input" name="pw" placeholder="Password" required/>
+
+
+                                     
+                              </div>
+
+                              <label class="container">Customer
+                              <input type="radio" checked="checked" name="radio" id="custbut" name="type" value="cust">
+                              <span class="checkmark"></span>
+                              </label>
+                              <label class="container">Driver
+                              <input type="radio" name="radio" id="ref" name="type" value="driv">
+                              <span class="checkmark"></span>
+                              </label>
+                              <div id="refno" name="reference" style="display:none">
+                                    <div class="input-container">
+                                        <label>Please Enter your reference number, if you are a driver:</label>
+                                        <input type="text" class="input" name=""/>
+                                    </div>
+                              </div>        
+                              
+                              <label class="container">Admin
+                              <input type="radio" name="radio" id="adminbut" value="admin">
+                              <span class="checkmark"></span>
+                              </label>
+
+
+                              <input type="submit" name="login" value="Login" class="button"/>
+                      </form>   
+        
+        
+             </div>
+          </div>
+      </div>
+</div>
+    
+
+
+
+
+
+</body>
+</html>

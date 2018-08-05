@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<link rel="stylesheet" type="text/css" href="css/driverrequeststyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/administrator.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+</head>
+<body>
+
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                         <li>
+                             <span class="headi">Cab Management System</span>
+                         </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->       
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+                
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 span1">
+                       DRIVER REQUEST
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+
+
+
+<div class="container-fluid img">
+        <div class="test">
+ 
+<i><h3 style="color:pink">Want to add your car to our robust fleet and/or want to drive them, too? Please fill in the following details. Our Team will contact you as soon as we can.</h3></i>
+
+<div class="container">
+  <form action="drivreq1.php" method="POST" enctype="multipart/form-data">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="firstname" placeholder="Your Full Name..">
+
+    <label for="phone">Phone Number</label><br><br>
+    <input type="tel" id="name" name="phonenum"  placeholder="Your phone number.."><br><br>
+
+  
+    <label for="emailress">Address</label>
+    <input type="text" id="addr" name="email" placeholder="Your address..">
+    
+    <label for="carnum">Car Number</label>
+    <input type="text" id="num" name="carno" placeholder="Your Car Number..">
+    
+    <label for="city">City</label>
+    <input type="text" id="cit" name="city" placeholder="Your city..">
+
+    <label for="ins">Insurance Validity </label>
+    <input type="text" id="insur" name="insurance" placeholder="mm/yyy">
+
+
+    <h4><label for="ins">Do you want to drive for us, in addition to leasing your car? </label><br>    </h4>
+    <h5><section class="dri">
+    <input type="radio" id="lcd" name="od" value="leasecumdriver">Yeah, I want to drive, too!&nbsp <input type="radio" id="ocd"  name="od" value="onlydriver">No, I'll just settle for leasing my car.<br><br>
+     </section></h5>
+
+
+    <input type="file" id="files" name="file[]" multiple="multiple"><br><sup>check below for the documents/scanned copies to be attached*</sup><br><br>
+
+    <label for="comm">Message:</label>
+    <textarea name="textmes" placeholder="Write a few words...."></textarea><br><br>
+
+    <input type="submit" class="btn btn-success" name="sendemail" value="Submit">&nbsp <input type="reset" class="btn btn-success" value="Reset">
+
+  </form>
+</div><br><br>
+</div>
+<div id="docs" class="imgdoc">
+
+
+    <h3>Driver Documents</h3><br>
+
+<h4>1. Valid Commercial Driver's License (Yellow Badge)<br></h4>
+<h4>2. PAN Card<br></h4>
+<h4>3. Aadhaar Card<br></h4>
+<h4>4. Current & Permanent Address Proofs<br></h4>
+<h4>5. Four References (With Addresses & Phone Numbers)<br></h4>
+<h4>6. Bank Details (Passbook OR Cancelled Cheque)</h4>
+    <br>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

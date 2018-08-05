@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<link rel="stylesheet" type="text/css" href="css/userbookingstyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/administrator.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                         <li>
+                             <span class="headi">Cab Management System</span>
+                         </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->       
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+                
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 span1">
+                       BOOK A CAB!
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+
+
+<div class="container-fluid">
+	<div class="row img">
+	    <div class="col-sm-4">
+	      <div class="login-form-container" id="login-form">
+          <div class="login-form-content">
+            <div class="login-form-header">
+              <h3>Travel in the city at the click of a button!</h3>
+            </div>  
+              <form name="userhis" action="mapdb.php" class="login-form" method="post">
+                <input type="hidden" name="durat" id="2">
+                <input type="hidden" name="cost">
+                <input type="hidden" name="carn">
+                      <div class="input-container">
+                          <i class="fa fa-home"></i>
+                          <input type="text" class="input" name="src" id="txtSource" placeholder="Enter your source" name="source">
+                      </div>
+                      <div class="input-container">
+                          <i class="fa fa-map-marker"></i>
+                          <input type="text" class="input" name="dst" id="txtDestination" placeholder="Enter your destination" name="destination">
+                      </div>
+                      <div class="input-container">
+                          <i class="fa fa-map"></i>
+                          <input type="text" class="input" name="dist" id="1" placeholder="Distance">
+                      </div>    
+                          <input type="button" class="button" value="Get Route" onclick="GetRoute()" /><hr>
+                      
+                      <label class="container">Mini 
+                      <input type="radio"  checked="checked" name="cabs" value="r1">
+                      <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Prime
+                      <input type="radio" name="cabs" value="r2">
+                      <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Micro
+                      <input type="radio" name="cabs" value="r3">
+                      <span class="checkmark"></span>
+                      </label>
+                      <label class="container">Sedan
+                      <input type="radio" name="cabs" value="r4">
+                      <span class="checkmark"></span>
+                      </label>
+                      <label class="container">SUV
+                      <input type="radio" name="cabs" value="r4">
+                      <span class="checkmark"></span>
+                      </label>
+                      <button id="sub" class="button1" onclick="car_nam(); costcal();">Ride Now!</button>
+              </form>
+            
+          </div>        
+        </div>  
+      </div>
+	    <div class="col-sm-8 mapalign">
+	      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkXlFMtPvX4ERjSIbkVQuuIoxyy9DwoIM&sensor=false&libraries=places"></script>
+                        <script type="text/javascript">
+                            var map;
+                            var source, destination;
+                            var directionsDisplay;
+                            var directionsService = new google.maps.DirectionsService();
+                            google.maps.event.addDomListener(window, 'load', function () {
+                            new google.maps.places.SearchBox(document.getElementById('txtSource'));
+                            new google.maps.places.SearchBox(document.getElementById('txtDestination'));
+                            directionsDisplay = new google.maps.DirectionsRenderer({ 'draggable': true });
+                            });
+                           function GetRoute() {
+                                var mumbai = new google.maps.LatLng(18.9750, 72.8258);
+                                var mapOptions = {
+                                zoom: 7, 
+                                center: mumbai
+                            };
+            
+                            map = new google.maps.Map(document.getElementById('dvMap'), mapOptions);
+                            directionsDisplay.setMap(map);
+                            directionsDisplay.setPanel(document.getElementById('dvPanel'));
+
+                           //*********DIRECTIONS AND ROUTE**********************//
+                           source = document.getElementById("txtSource").value;
+                           destination = document.getElementById("txtDestination").value;
+                           var request = {
+                           origin: source,
+                           destination: destination,
+                           travelMode: google.maps.TravelMode.DRIVING
+                           };            
+                           directionsService.route(request, function (response, status) {
+                           if (status == google.maps.DirectionsStatus.OK) {
+                           directionsDisplay.setDirections(response);
+                           }
+                           });
+
+                           var service = new google.maps.DistanceMatrixService();
+                           service.getDistanceMatrix({
+                           origins: [source],
+                           destinations: [destination],
+                           travelMode: google.maps.TravelMode.DRIVING,
+                           unitSystem: google.maps.UnitSystem.METRIC,
+                           avoidHighways: false,
+                           avoidTolls: false
+                           }, function (response, status) {
+                           if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+                           var distance = response.rows[0].elements[0].distance.text;
+                           var duration = response.rows[0].elements[0].duration.text;
+                           var dvDistance = document.getElementById("dvDistance");
+                           dvDistance.innerHTML = "";
+                           dvDistance.innerHTML += "Distance: " + distance + "<br />";
+                           dvDistance.innerHTML += "Duration:" + duration;
+                 userhis.dist.value=distance;
+                 userhis.durat.value=duration;
+                 } else {
+                           alert("Unable to find the distance via road.");
+                 }              
+                           });  
+                         }
+       
+                        </script>
+                            <table border="0" cellpadding="0" cellspacing="3">
+                                <tr>
+                                   <td colspan="1">
+                                        <div id="dvDistance" style="background-color: silver; color:blue">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="dvMap" style="width: 400px; height: 400px">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div id="dvPanel" style="width: auto; height: auto; background-color: silver">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>    
+
+
+
+
+	    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>

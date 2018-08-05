@@ -1,0 +1,119 @@
+@media screen and (max-height: 600px) {
+	.login-form-container {
+		margin-top: 0 !important;
+		top: 10px !important;
+	}
+}
+@media screen and (max-width: 400px) {
+	.login-form-container {
+		left: 5px;
+		margin-left: 5px;
+		min-width: 283px;
+		right: 10px;
+		margin-bottom: 10px;
+		width: auto;
+	}
+	.login-form .input {
+		width: 140px;
+	}
+	.socmed-login .socmed-btn i {
+		margin-right: 5px;
+		width: 19px;
+	}
+}
+
+/* CONTAINER */
+.login-form-container {
+    max-width: 400px;
+	width: 100%;
+	position:relative;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: 50px;
+	margin-bottom: 200px;  
+}
+.login-form-container a{
+	text-decoration:none;
+}
+
+/* CONTENT */
+.login-form-content {
+	background-color: #FFFFFF;
+	padding: 25px 25px;
+}
+.login-form-content i{
+	    width: 50px;
+	    text-align: center;
+		
+	}
+
+/* HEADER */
+.login-form-header {
+	text-align: center;
+}
+
+.login-form-header h3 {
+	font-weight: lighter;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* FROM INPUT */
+.login-form .input-container {
+	border-bottom: 2px dotted #CCCCCC;
+    margin-top: 25px;
+    font-size: 20px;
+    color: gray;
+	padding-bottom: 5px;
+}
+.login-form .input {
+	border: 0;
+	width: 270px;
+}
+
+.login-form .input:focus {
+    outline:none;
+}
+
+.login-form .button {
+	margin-top: 15px;
+    width: 100%;
+    background: #2e7ec7;
+    border: 0;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 15px;
+	cursor: pointer;
+	transition: background .3s;
+}
+.login-form .button:hover {
+	background: #1f6eb7;
+}
+.login-form .button:focus {
+	outline: none;
+}
+
+.bgimg{
+	background-image: url("E:/Final/images/taxibg.jpg");
+	background-size: stretch;
+	background-repeat: no-repeat;
+}
+
+.resize{
+  margin-top: 10px;  
+  font-style: italic;
+  color:gray;
+  font-size:25px;
+  text-shadow: 1px 0 #888888;
+  letter-spacing:1px;
+  font-weight:bold;
+  display: inline-block;
+}
+
+
+
+#info{
+	display: none;
+	color: green;
+}	

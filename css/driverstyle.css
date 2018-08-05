@@ -1,0 +1,29 @@
+#drivimg{
+	color: white;
+	background-image: url("E:/Final/images/forest.jpg");
+
+}
+
+#drivimg input
+{
+	color: black;
+	width: 100%;	
+}
+
+#drivimg label{
+	color:white;
+    font-size: 35px;
+	font-family: Arial;
+	text-shadow: 5px;
+}
+
+#drivimg button{
+	font-size: 20px;
+	width: 50%
+}
+
+.footerclass{
+	
+    font-size: 20px;
+    padding-top: 50px;
+}

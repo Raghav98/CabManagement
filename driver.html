@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<link rel="stylesheet" type="text/css" href="css/driverstyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/administrator.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+</head>
+<body>
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                         <li>
+                             <span class="headi">Cab Management System</span>
+                         </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->       
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+                
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 span1">
+                       DRIVER PAGE
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+
+
+
+<div id="drivimg">
+
+<div class="container-fluid">
+      <div class="row" id="drivimg">
+                  <div class="col-sm-3">
+                    
+                  </div>
+
+                  <div class="col-sm-6">
+                        <h1><center>DRIVER DATA</center></h1><br>
+                        <center><form name="btnform" id="fonts" action="drivdb.php" method="get"><button id="ride" class="btn btn-success">Do you want to ride?</button><br><br>
+                             <div class="row">
+                             <div class="col-sm-6">
+                             <label for="useridentification">User_ID:</label><br>
+                             <input type="text" name="userid" id="uid" value="<?php echo $uid; ?>"><br><br><br><br>
+                             <label for="source">Source:</label></br>
+                             <input type="text" name="sour" id="srce"><br><br></div>
+                             <div class="col-sm-6">
+                             <label for="destination">Destination:</label><br>
+                             <input type="text" name="destinat" id="des "><br><br><br><br>
+                             <label for="distance">Distance:</label><br>
+                             <input type="text" name="dis" id="dista"><br><br></div>
+                             </div><br><br>
+                             <button value="Check" class="btn btn-success"  onClick="">Check</button><br><br>
+
+                        </form></center>
+                  </div> <!--END OF COLUMN--> 
+
+                  <div class="col-sm-3">
+                    
+                  </div>
+      </div>  <!--END OF ROW-->
+</div>
+
+<div class="container-fluid footerclass">
+</div>
+
+</div> <!--END OF DIVISION FOR THE BACKGROUND -->
+
+</body>
+</html>

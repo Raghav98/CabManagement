@@ -1,0 +1,202 @@
+.img{
+background-image:url("E:/Final/images/light-color-background-hd-1.jpg");
+background-repeat: no-repeat;
+background-size: stretch;
+}
+
+.mapalign{
+   margin-top: 20px;
+}
+
+@media screen and (max-height: 600px) {
+	.login-form-container {
+		margin-top: 0 !important;
+		top: 10px !important;
+	}
+}
+@media screen and (max-width: 400px) {
+	.login-form-container {
+		left: 5px;
+		margin-left: 5px;
+		min-width: 283px;
+		right: 10px;
+		margin-bottom: 10px;
+		width: auto;
+	}
+	.login-form .input {
+		width: 140px;
+	}
+	.socmed-login .socmed-btn i {
+		margin-right: 5px;
+		width: 19px;
+	}
+}
+
+/* CONTAINER */
+.login-form-container {
+    max-width: 400px;
+	width: 100%;
+	position:relative;
+	left: 50%;
+	margin-left: -200px;
+	margin-top: 30px;
+	margin-bottom: 200px;  
+}
+.login-form-container a{
+	text-decoration:none;
+}
+
+/* CONTENT */
+.login-form-content {
+	background-color: #FFFFFF;
+	padding: 25px 25px;
+}
+.login-form-content i{
+	    width: 50px;
+	    text-align: center;
+		
+	}
+
+/* HEADER */
+.login-form-header {
+	text-align: center;
+}
+
+.login-form-header h3 {
+	font-weight: lighter;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* FROM INPUT */
+.login-form .input-container {
+	border-bottom: 2px dotted #CCCCCC;
+    margin-top: 25px;
+    font-size: 20px;
+    color: gray;
+	padding-bottom: 5px;
+}
+.login-form .input {
+	border: 0;
+	width: 270px;
+}
+
+.login-form .input:focus {
+    outline:none;
+}
+
+.login-form .button {
+	margin-top: 15px;
+    width: 100%;
+    background: green;
+    border: 0;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 15px;
+	cursor: pointer;
+	transition: background .3s;
+}
+.login-form .button:hover {
+	background: #1f6eb7;
+}
+.login-form .button:focus {
+	outline: none;
+}
+
+.bgimg{
+	background-image: url("E:/Final/images/taxibg.jpg");
+	background-size: stretch;
+	background-repeat: no-repeat;
+}
+
+label{
+	font-weight: lighter;
+	font-size:15px; 
+
+}
+
+
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left:50px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    `-ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: none;
+    opacity: 0;
+    
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 13px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 100%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: olivedrab;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: mediumslateblue;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position:absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+.login-form .button1 {
+	margin-top: 15px;
+    width: 100%;
+    background:#1f6eb7	;
+    border: 0;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 15px;
+	cursor: pointer;
+	transition: background .3s;
+}
+.login-form .button1:hover {
+	background: green;
+}
+.login-form .button1:focus {
+	outline: none;
+}

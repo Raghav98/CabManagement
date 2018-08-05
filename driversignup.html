@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<link rel="stylesheet" type="text/css" href="css/signupstyle.css">
+<link rel="stylesheet" type="text/css" href="css/bgimg.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/signup.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+<body>
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                         <li>
+                             <span class="headi">Cab Management System</span>
+                         </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->       
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+                
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 resize">
+                       DRIVER SIGNUP
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+
+
+
+
+
+<div class="container-fluid background">
+      <div class="row">
+              <div class="login-form-container" id="login-form">
+                <div class="login-form-content">
+                      <div class="login-form-header">
+                            <h3>Ride For Us!</h3>
+                      </div>
+                      <form  action='connect.php' class="login-form" method="POST" name="userform">
+                              <div class="input-container">
+                                     <i class="fa fa-envelope"></i>
+                                     <input type="text" class="input" id="username" name="uname" placeholder="Username*" required>
+                                     <p id="info">Username can contain any letters or numbers, without spaces</p>
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-mobile-phone"></i>
+                                     <input type="tel" id="ph" class="input" name="ph" placeholder="Phone Number*" required>
+                                     <p id="info">Enter your phone number</p>
+
+                                     
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-lock"></i>
+                                     <input type="password" id="password" class="input" name="password" placeholder="Create Password*" required >
+                                     <p id="info">Password should be at least 4 characters</p>
+                                     
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-lock"></i>
+                                     <input type="password" id="password_confirm" class="input" name="password_confirm" placeholder="Confirm Password*" required>
+                                     <p id="info">Please confirm password</p>
+      
+                                     
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-address-book"></i>
+                                     <input type="text" id="email" class="input" name="email" placeholder="E-mail">
+                                     <p id="info">Please provide your E-mail</p>
+      
+                                     
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-map-marker"></i>
+                                     <input type="address" id="add" class="input" name="address" placeholder="Address" >
+                                     <p id="info">Enter your address</p>
+      
+                                     
+                              </div>
+                              <div class="input-container">
+                                     <i class="fa fa-archive"></i>
+                                     <input type="text" id="refnum" class="input" name="ref" placeholder="Reference Number*" >
+                                     <p id="info">Enter your address</p>
+      
+                                     
+                              </div>
+                                                            
+
+                              <input type="submit" name="login" value="Signup as a Driver!" class="button"/>
+                              <input type="button" onclick="redirecttocustomersignup()" name="driversignup" value="Signup as a Customer?*" class="button">
+                      </form>   
+        
+        
+             </div>
+          </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

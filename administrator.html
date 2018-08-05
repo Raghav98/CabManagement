@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="Bootstrap\bootstrap-3.3.7-dist\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/generalstyle.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/administrator.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+</head>
+<body>
+<div class="container-fluid topnav">
+        <div class="row">
+                <div class="col-sm-3 logo">
+                     <img src="images/305962.jpg" class="img-wrap">
+                </div>
+                <!--END OF LOGO DIVISION-->
+                <div class="col-sm-4">   
+                      <ul>
+                      	 <li>
+                      		   <span class="headi">Cab Management System</span>
+                      	 </li></ul>
+                </div>
+                <!--END OF HEADING SECTION-->      	
+                <div class="col-sm-5">
+                        <section class="align">
+                                <a href="index.html" class="but">Home</a>
+                                <a href="index.html" class="but">Sign in</a>
+                                <a href="customersignup.html" class="but">Sign up</a>
+                                <a href="" class="but" onclick="warning()">Logout</a>
+                        </section> 
+                </div>
+                <!--END OF LINKS SECTION-->
+              	
+        </div>    <!--END OF ROW ONE-->
+</div>   <!--END OF CONTAINER ONE-->
+
+
+<div class="container-fluid navbar2 topnav">
+        <div class="row">
+                <div class="col-sm-3 span1">
+                       ADMINISTRATOR
+                </div>
+                <div class="col-sm-9">
+                      <section class="align">
+                          <ul>
+                            <li>
+                                 <a href="administrator.html" class="btn">Administrator</a>
+                                 <a href="userbooking.html" class="btn">Book a Cab</a>
+                                 <a href="driver.html" class="btn">Driver Page</a>
+                                 <a href="userhistory.html" class="btn">User History</a>
+                                <a href="driverrequest.html" class="btn">Driver Request</a>
+                            </li>
+                          </ul>
+                </div>        
+                               
+        </div>
+</div>
+    
+
+<div class="container-fluid img">
+	      <div class="row">
+	              <div class="col-sm-3"><!--START OF COLUMN ONE-->
+	                      <!--VERTICAL MENU-->
+                        <div class="vertical-menu">
+                              <header id="header" class="alt skel-layers-fixed">
+                                   <h1>Administrator <span class="fcolor">Page</span></a></h1><br>
+                              </header>
+                              <!--END OF HEADING SECTION-->
+                              <ul class="nav nav-pills nav-stacked">
+                                   <ul class="actions">
+                                      <h3>
+                                          <li>
+                                             <button class="button btn-info btn-lg cus" id="car">Add Cars</button><br>
+                                             <button class="button big scrolly btn-info btn-lg cus" id="rem">Remove Cars</button><br> 
+                                             <button class="button big scrolly btn-info btn-lg cus" id="removedriv">Remove Drivers</button><br>
+                                             <button class="button big scrolly btn-info btn-lg cus" id="adddriv">Add Drivers</button><br>
+                                             <button class="button big scrolly btn-info btn-lg cus" id="vtab">View Tables</button><br>
+                                             <button class="button big scrolly btn-info btn-lg cus" id="adsend">Mail_Send</button>
+                                          </li>
+                                      </h3> 
+                                    </ul>
+                              </ul><br>
+                              <!--END OF BUTTON SECTION-->
+                        </div> <!--END OF VERTICAL MENU-->
+                </div> <!--END OF COLUMN ONE-->
+
+
+                
+
+	              <div class="col-sm-9"><!--START OF COLUMN TWO-->
+	 	                  <div id="cars" class="wrapper style1" style="display:none">
+                                   <h2><center>Car Add Section</center></h2>
+                                   <form name="caradd" action="admin_activity1.php">
+                                   <label><h4>Registration Number of the Car:</h4></label><br><input type="text" class="wid" name="carid"><br><br>
+                                   <label><h4>Type of the Car:</h4></label><br><input type="text" class="wid" name="cartype"><br><br>
+                                   <button type=button id="dco" class="btn btn-primary">Is the Driver Owner of the Car?</button><br><br>
+                                   <div id="ocd" style="display: none;"><label><h4>Enter Driver Reference Number:</h4></label><br><input type="text" class="wid" name="drivcumown"><br><br></div>
+                                   <button type="submit" class="btn btn-success">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>
+                                   </form>
+                              <!--CAR ADD SECTION-->
+                      </div>
+
+
+
+                      <div id="remov" style="display: none">
+                              <h2><center>Car Remove Section</center></h2>
+                              <form name="carremove" action="admin_activity2.php">
+                              <label><h4>Enter the car id to remove:</h4></label><br><input type="text" class="wid" name=""><br><br>
+                              <button type="submit" class="btn btn-success">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>       
+                              </form>
+                              <!--CAR REMOVE SECTION-->
+                      </div>
+
+
+                      <div id="removedriver" style="display: none">
+                              <h2><center>Driver Remove Section</center></h2>
+                              <form name="drivremov" action="admin_activity3.php">
+                              <label><h4>Enter the driver id to remove:</h4></label><br><input type="text" class="wid" name="id"><br><br>
+                              <button type="submit" class="btn btn-success">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>
+                              <!--DRIVER REMOVE SECTION-->
+                      </div>
+
+
+                      <div id="drivs" class="wrapper style2" style="display:none">
+                              <h2><center>Driver Add Section</center></h2>
+                              <form action="admin_activity4.php" method="POST">
+                              <label><h4>Enter the Name of the driver:</h4></label><br><input type="text" class="wid" name="name"><br><br>
+                              <label><h4>Enter the phone number:</h4></label><br><input type="text" class="wid" name="phno"><br><br>
+                              <label><h4>Enter the email id:</h4></label><br><input type="text" class="wid" name="email"><br><br>
+                              <label><h4>Enter the address:</h4></label><br><input type="text" class="wid" name="add"><br><br>
+                              <label><h4>Enter the unique reference number:</h4></label><br><input type="text" class="wid" name="ref"><br><br>
+
+                              <button type=button id="dcoo" class="btn btn-primary">Is the Driver Owner of the Car?</button><br><br>
+                              <div id="ocdd" style="display: none;"><label><h4>Enter Car Reference Number:</h4></label><br><input type="text" class="wid" name="drivcumown"><br><br></div>
+
+
+                              <button type="submit" class="btn btn-success">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>
+                             </form>
+                             <!--DRIVER ADD SECTION-->
+                      </div>
+         
+                      <div id="tvbs" class="wrapper style2" style="display:none">
+                            <h2><center>Table View Section</center></h2>      
+                            <form name="tabview" action="viewtab.php" method="POST">
+                            <label><h4>Enter table number to view:</h4></label><br><input type="text" class="wid" name="tabid"><br><br>
+                            <button type="submit" class="btn btn-success" onClick="">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>
+                            </form>
+                            <!--VIEW TABLE SECTION-->     
+
+                      </div>
+
+
+                      <div id="admail" class="wrapper style2" style="display:none">
+                            <h2><center>Admin Mailer</center></h2>    
+                            <form name="admailer" action="adminmail.php" method="POST">
+                            <label><h4>Enter number to send:</h4></label><br><input type="text" class="wid" name="admid"><br><br>
+                            <label><h4>Enter Table_Id:</h4></label><br><input type="text" class="wid" name="tid"><br><br>
+                            <button type="submit" class="btn btn-success" name ="sub" onClick="">Submit!</button>&nbsp <button type="reset" class="btn btn-success">Reset!</button>
+                            </form>
+                            <!--ADMIN MAILER SECTION-->
+                      </div> 
+
+                </div><!--END OF COLUMN TWO-->
+                 
+
+	    </div><!--END OF ROW TWO-->
+
+</div> <!--END OF CONTAINER TWO-->
+
+          
+
+</body>
+</html>
+
